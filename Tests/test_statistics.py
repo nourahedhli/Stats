@@ -2,7 +2,7 @@ import unittest
 import random
 from Statistics.Statistics import Statistics
 import pprint
-import numpy
+import numpy as np
 from Statistics.randomData import randomcode
 
 
