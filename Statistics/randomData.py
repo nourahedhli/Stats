@@ -3,7 +3,7 @@ import pprint
 
 
 def random_code():
-    random.seed(9)
+    random.seed(3)
     randomData = []
     i = 1
     while i < 6:

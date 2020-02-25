@@ -3,8 +3,6 @@ from Calculator.Division import division
 from Statistics.randomData import random_code
 
 
-
-
 def mean(data):
     num_values = len(data)
     total = 0
