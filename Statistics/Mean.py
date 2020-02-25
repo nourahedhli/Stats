@@ -1,5 +1,8 @@
 from Calculator.Addition import addition
 from Calculator.Division import division
+from Statistics.randomData import random_code
+
+
 
 
 def mean(data):

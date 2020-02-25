@@ -2,7 +2,7 @@ import random
 import pprint
 
 
-def randomcode():
+def random_code():
     random.seed(9)
     randomData = []
     i = 1
@@ -10,3 +10,4 @@ def randomcode():
         randomData.append(random.randint(1, 100))
         i += 1
         pprint.pprint(randomData)
+    return randomData

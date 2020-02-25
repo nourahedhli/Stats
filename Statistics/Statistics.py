@@ -2,6 +2,8 @@ from Calculator.Calculator import Calculator
 
 from Statistics.Mean import mean
 
+from Statistics.randomData import random_code
+
 
 class Statistics(Calculator):
     data = []
