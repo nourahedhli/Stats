@@ -6,25 +6,37 @@ import decimal
 
 def random_code():
     random.seed(3)
-    randomData = []
+    randomData1 = []
+    randomData2 = []
+    List = []
     i = 1
     while i < 6:
-        randomData.append(random.randint(1, 100))
-        x = "{0:.2f}".format(random.random())
-        randomData.append(x)
+        y = random.randint(1, 100)
+        randomData1.append(y)
+        x = random.random()
+        x_decimal = round(x, 2)
+        randomData2.append(x_decimal)
         i += 1
-    pprint.pprint(randomData)
-    return randomData
+    # select a random item from a list
+    randomData1.sort()
+    randomData2.sort()
+    rand_num = random.randint(0, len(randomData1))
+    List = randomData2 + randomData1
+    pprint.pprint(List)
+
+    return List
 
 
 def random_code_withoutSeed():
     randomData1 = []
+
     i = 1
     while i < 3:
-        randomData1.append(random.randint(4, 300))
+        y = random.randint(4, 300)
+        randomData1.append(y)
         x = "{0:.2f}".format(random.random())
         randomData1.append(x)
         i += 1
 
-    pprint.pprint(randomData1)
+    #pprint.pprint(randomData1)
     return randomData1
