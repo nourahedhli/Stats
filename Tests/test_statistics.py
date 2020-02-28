@@ -2,7 +2,6 @@ import unittest
 
 from Statistics.Statistics import Statistics
 
-
 from Statistics.randomData import random_code
 from Statistics.randomData import random_code_withoutSeed
 
@@ -18,11 +17,15 @@ class MyTestCase(unittest.TestCase):
 
     def test_mean_calculator(self):
         mean = self.statistics.mean(self.testData)
-        self.assertEqual(mean, 20.541)
+        self.assertEqual(mean, 32.79)
 
     def test_median_calculator(self):
         median = self.statistics.median(self.testData)
-        self.assertEqual(median, 1.455)
+        self.assertEqual(median, 2.91)
+
+    def test_mode_calculator(self):
+        mode = self.statistics.mode(self.testData)
+        self.assertEqual(mode, 1)
 
 
 if __name__ == '__main__':
