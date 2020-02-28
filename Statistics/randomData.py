@@ -5,7 +5,7 @@ import decimal
 
 
 def random_code():
-    random.seed(3)
+    random.seed(6)
     randomData1 = []
     randomData2 = []
     List = []
