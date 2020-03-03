@@ -5,6 +5,8 @@ from Statistics.Median import Median
 from Statistics.Mode import mode
 from Statistics.randomData import random_code
 
+from Statistics.standardDeviation import StandardDeviation
+
 
 class Statistics(Calculator):
     data = []
@@ -20,4 +22,8 @@ class Statistics(Calculator):
 
     def mode(self, data):
         self.result = mode(data)
+        return self.result
+
+    def standardDeviation(self, data):
+        self.result = StandardDeviation(data)
         return self.result

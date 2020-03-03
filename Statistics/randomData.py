@@ -1,6 +1,6 @@
 import random
 import pprint
-
+import numpy as np
 import decimal
 
 
@@ -20,10 +20,11 @@ def random_code():
     # select a random item from a list
     randomData1.sort()
     randomData2.sort()
-    rand_num = random.randint(0, len(randomData1))
+
     List = randomData2 + randomData1
     pprint.pprint(List)
-
+    rand_num = random.choice(List)
+    pprint.pprint(rand_num)
     return List
 
 
@@ -38,5 +39,5 @@ def random_code_withoutSeed():
         randomData1.append(x)
         i += 1
 
-    #pprint.pprint(randomData1)
+    # pprint.pprint(randomData1)
     return randomData1

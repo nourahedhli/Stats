@@ -1,5 +1,6 @@
 from Calculator.Subtraction import subtraction
 from Calculator.Addition import addition
+from Calculator.square import square
 
 
 class Calculator:
@@ -14,4 +15,8 @@ class Calculator:
 
     def subtract(self, a, b):
         self.result = subtraction(a, b)
+        return self.result
+
+    def square(self, a):
+        self.result = Square(a)
         return self.result
