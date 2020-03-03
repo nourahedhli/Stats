@@ -27,6 +27,10 @@ class MyTestCase(unittest.TestCase):
         mode = self.statistics.mode(self.testData)
         self.assertEqual(mode, 1)
 
+    def test_standDev_calculator(self):
+        standDev = self.statistics.standardDeviation(self.testData)
+        self.assertEqual(standDev, 21.736666666666668)
+
 
 if __name__ == '__main__':
     unittest.main()
