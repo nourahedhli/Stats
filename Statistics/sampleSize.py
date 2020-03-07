@@ -44,7 +44,7 @@ def SampleSize_withStd(data):
     while i < len(List):
         x = product(List[i], StandardDeviationSample(data))
         y = round(division(x, E[i]))
-        List1.append(square(y))
+        List1.append((square(y)))
         i += 1
     return List1
 
@@ -64,6 +64,6 @@ def CochranSampleSize(data):
     i = 0
     n = []
     while i < len(List):
-        n.append(product(List[i], PQ) / List1[i])
+        n.append(round(product(List[i], PQ) / List1[i]))
         i += 1
     return n
