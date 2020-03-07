@@ -4,7 +4,7 @@ from Statistics.Statistics import Statistics
 
 from Statistics.randomData import random_code
 from Statistics.randomData import random_code_withoutSeed
-from Statistics.Zscores import z_scores
+from Statistics.Zscores import z_values
 from Statistics.systematic import Systematic
 
 
@@ -15,8 +15,15 @@ class MyTestCase(unittest.TestCase):
         self.testData = random_code()
         self.statistics = Statistics()
         self.testData1 = random_code_withoutSeed()
-        self.testZ = z_scores(self.testData)
+        self.testZ = z_values(self.testData)
         self.testSystematic = Systematic(self.testData)
+        self.testZscore = z_values(self.testData)
+
+
+
+
+
+
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
@@ -60,9 +67,9 @@ class MyTestCase(unittest.TestCase):
         q3 = self.statistics.Quartile3(self.testData)
         self.assertEqual(q3, 71.25)
 
-    def test_z_scores(self, masterResult=None):
+    def test_z_Values(self, masterResult=None):
         masterResults = []
-        result = self.statistics.Z_scores(self.testZ)
+        result = self.statistics.Z_values(self.testZ)
         '''go make a list of z score results using the library here'
         'then make a counter that you can use as the array key to match your master list of results with your calculated list'''
 
@@ -83,7 +90,14 @@ class MyTestCase(unittest.TestCase):
             self.assertTrue(True)
 
 
+    def test_Z_scores (self):
+        Result = []
+        result = self.statistics.Z_scores(self.testZscore)
+        for i in result:
+            Result.append(i)
 
+        if Result == result:
+            self.assertTrue(True)
 
 if __name__ == '__main__':
     unittest.main()
