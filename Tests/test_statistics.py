@@ -5,6 +5,9 @@ from Statistics.Statistics import Statistics
 from Statistics.randomData import random_code
 from Statistics.randomData import random_code_withoutSeed
 from Statistics.Zscores import z_scores
+from Statistics.systematic import Systematic
+
+
 
 
 class MyTestCase(unittest.TestCase):
@@ -13,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         self.statistics = Statistics()
         self.testData1 = random_code_withoutSeed()
         self.testZ = z_scores(self.testData)
-
+        self.testSystematic = Systematic(self.testData)
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
@@ -68,6 +71,18 @@ class MyTestCase(unittest.TestCase):
 
         if masterResult == result:
             self.assertTrue(True)  # Is always True
+
+    def test_systematic_calc (self):
+
+        Result =[]
+        result = self.statistics.Systematic(self.testSystematic)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
+
+
 
 
 if __name__ == '__main__':
