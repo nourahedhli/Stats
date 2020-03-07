@@ -3,14 +3,15 @@ from Calculator.Division import division
 from Statistics.randomData import random_code
 from Statistics.standardDeviation import StandardDeviationPopulation
 from Statistics.standardDeviation import StandardDeviationSample
-from Calculator.square import square
+from Calculator.squareRoot import squareRoot
+import math
 
 
 def population_variance(data):
     x = StandardDeviationPopulation(data)
-    return square(x)
+    return squareRoot(x)
 
 
 def sample_variance(data):
     x = StandardDeviationSample(data)
-    return square(x)
+    return squareRoot(x)
