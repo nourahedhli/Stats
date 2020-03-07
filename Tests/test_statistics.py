@@ -146,5 +146,9 @@ class MyTestCase(unittest.TestCase):
         meanADev = self.statistics.MeanAbsStd(self.testData)
         self.assertEqual(meanADev, 24.03988)
 
+    def test_mean_Dev (self):
+        meanDev = self.statistics.MeanStd(self.testData)
+        self.assertEqual(meanDev, 1.4210854715202005e-15)
+
 if __name__ == '__main__':
     unittest.main()

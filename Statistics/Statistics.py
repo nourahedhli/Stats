@@ -16,6 +16,7 @@ from Statistics.Zscores import *
 from Statistics.confidence_interval import *
 from Statistics.sampleSize import *
 from Statistics.skewness import *
+from Statistics.AbsMeanStd import *
 
 
 class Statistics(Calculator):
@@ -96,4 +97,12 @@ class Statistics(Calculator):
 
     def SampleSizeCochran(self, data):
         self.result = CochranSampleSize(data)
+        return self.result
+
+    def MeanAbsStd(self, data):
+        self.result = meanAbsDev(data)
+        return self.result
+
+    def MeanStd(self, data):
+        self.result = meanDev(data)
         return self.result
