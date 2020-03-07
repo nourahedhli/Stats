@@ -5,7 +5,6 @@ from Statistics.Variance import population_variance
 import scipy
 
 
-
 def z_values(data):
     list1 = []
     for i in data:

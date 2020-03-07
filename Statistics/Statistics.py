@@ -93,3 +93,7 @@ class Statistics(Calculator):
     def SampleSizeWithStd(self, data):
         self.result = SampleSize_withStd(data)
         return self.result
+
+    def SampleSizeCochran(self, data):
+        self.result = CochranSampleSize(data)
+        return self.result
