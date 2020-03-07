@@ -108,14 +108,14 @@ class MyTestCase(unittest.TestCase):
     def test_margin_Error(self):
 
         Result = []
-        result = self.statistics.MarginError(self.testZscore)
+        result = self.statistics.MarginError(self.testData)
         for i in result:
             Result.append(i)
 
         if Result == result:
             self.assertTrue(True)
 
-    def test_SampleSize_without_std (self):
+    def test_SampleSize_without_std(self):
         Result = []
         result = self.statistics.SampleSizeWithoutStd(self.testData)
         for i in result:
@@ -124,7 +124,7 @@ class MyTestCase(unittest.TestCase):
         if Result == result:
             self.assertTrue(True)
 
-    def test_SampleSize_with_std (self):
+    def test_SampleSize_with_std(self):
         Result = []
         result = self.statistics.SampleSizeWithStd(self.testData)
         for i in result:
@@ -133,6 +133,14 @@ class MyTestCase(unittest.TestCase):
         if Result == result:
             self.assertTrue(True)
 
+    def test_SampleSize_Cochran(self):
+        Result = []
+        result = self.statistics.SampleSizeCochran(self.testData)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
 
 
 if __name__ == '__main__':
