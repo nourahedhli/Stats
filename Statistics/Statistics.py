@@ -8,7 +8,7 @@ from Statistics.systematic import Systematic
 from Statistics.standardDeviation import StandardDeviationPopulation
 from Statistics.standardDeviation import StandardDeviationSample
 from Statistics.Quartiles import *
-
+from Statistics.marginError import MarginError
 from Statistics.Variance import *
 
 from Statistics.Zscores import *
@@ -80,4 +80,8 @@ class Statistics(Calculator):
 
     def Skewness(self, data):
         self.result = Skewness(data)
+        return self.result
+
+    def MarginError(self, data):
+        self.result = MarginError(z_values(data))
         return self.result

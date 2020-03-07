@@ -105,6 +105,15 @@ class MyTestCase(unittest.TestCase):
         skew = self.statistics.Skewness(self.testData)
         self.assertEqual(skew, -1.0958752107177778)
 
+    def test_margin_Error(self):
+
+        Result = []
+        result = self.statistics.MarginError(self.testZscore)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
 
 
 if __name__ == '__main__':
