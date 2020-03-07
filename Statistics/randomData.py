@@ -1,11 +1,10 @@
 import random
 import pprint
-import numpy as np
-import decimal
+
 
 
 def random_code2():
-    random.seed(5)
+    random.seed(3)
     random_data1 = []
     random_data2 = []
     List = []
@@ -21,6 +20,7 @@ def random_code2():
     random_data2.sort()
 
     List = random_data2 + random_data1
+    pprint.pprint(List)
     return List
 
 
@@ -57,9 +57,9 @@ def random_data2():
     list2 = []
     while i < 6:
         x = '{:04.3f}'.format(random.uniform(2, 100))
-        list2.append(x)
+        list2.append(float(x))
         i += 1
-    pprint.pprint(list2)
+    # pprint.pprint(list2)
     return list2
 
 
