@@ -1,16 +1,14 @@
-from Calculator.Addition import addition
-from Calculator.Division import division
-from Statistics.randomData import random_code
 
 
 def mode(data):
     d = {}
-    for num in data:
-        if num not in d.keys():
-            d[num] = 1
-        else:
-            d[num] += 1
+    for i in data:
+        if i not in d:
 
-    Mode = max(d.values())
-    print(Mode)
-    return Mode
+            d[i] = 1
+        else:
+            d[i] += 1
+
+        Keymax = max(d, key=d.get)
+
+    return Keymax
