@@ -1,9 +1,8 @@
 import unittest
 
 from Statistics.Statistics import Statistics
-from Statistics.randomData import random_data2
-from Statistics.randomData import random_code
-from Statistics.randomData import random_code_withoutSeed
+
+from Statistics.randomData import *
 from Statistics.Zscores import z_values
 from Statistics.systematic import Systematic
 
@@ -12,9 +11,9 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.testData = random_code()
-        self.testData2 = random_data2()
+        self.testData2 = random_code2()
         self.statistics = Statistics()
-        self.testData1 = random_code_withoutSeed()
+        # self.testData1 = random_code_withoutSeed()
 
         self.testZ = z_values(self.testData)
         self.testSystematic = Systematic(self.testData)
@@ -152,11 +151,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_Population_Correlation(self):
         PopCorre = self.statistics.Population_Correlation(self.testData, self.testData2)
-        self.assertEqual(PopCorre,4)
+        self.assertEqual(PopCorre, 0.8337248694096866)
 
     def test_Sample_Correlation(self):
         SamCorre = self.statistics.Sample_Correlation(self.testData, self.testData2)
-        self.assertEqual(SamCorre,4)
+        self.assertEqual(SamCorre, 0.8337248694096866)
+
 
 if __name__ == '__main__':
     unittest.main()

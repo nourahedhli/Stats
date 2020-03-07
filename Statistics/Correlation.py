@@ -6,16 +6,14 @@ from Calculator.Subtraction import subtraction
 
 
 def average(x):
-    assert len(x) > 0
-    return float(sum(x)) / len(x)
+    summation = sum(x)
+    return float(summation) / len(x)
 
 
 def Population_Correlation(list1, list2):
     avg_x = average(list1)
     avg_y = average(list2)
     n = len(list1)
-    assert n > 0
-
 
     y2 = 0
     x2 = 0
@@ -31,9 +29,8 @@ def Population_Correlation(list1, list2):
 
 
 def Sample_Correlation(list1, list2):
-    assert len(list1) == len(list2)
     n = len(list1)
-    assert n > 0
+
     avg_x = average(list1)
     avg_y = average(list2)
     rod = 0
