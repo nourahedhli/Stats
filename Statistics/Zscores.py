@@ -3,7 +3,7 @@ from scipy import stats
 from statistics import mean
 from Statistics.Variance import population_variance
 import scipy
-from scipy.stats import zscore
+
 
 
 def z_values(data):

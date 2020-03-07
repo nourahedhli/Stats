@@ -4,7 +4,7 @@ import math
 
 from Statistics.randomData import random_code
 from Statistics.Mean import mean
-from Calculator.product import Multiplication
+
 from Calculator.square import square
 
 

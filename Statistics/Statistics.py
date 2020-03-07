@@ -14,7 +14,7 @@ from Statistics.Variance import *
 from Statistics.Zscores import *
 
 from Statistics.confidence_interval import *
-
+from Statistics.sampleSize import *
 from Statistics.skewness import *
 
 
@@ -84,4 +84,12 @@ class Statistics(Calculator):
 
     def MarginError(self, data):
         self.result = MarginError(z_values(data))
+        return self.result
+
+    def SampleSizeWithoutStd(self, data):
+        self.result = SampleSize_withoutStd(data)
+        return self.result
+
+    def SampleSizeWithStd(self, data):
+        self.result = SampleSize_withStd(data)
         return self.result

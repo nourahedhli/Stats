@@ -115,6 +115,25 @@ class MyTestCase(unittest.TestCase):
         if Result == result:
             self.assertTrue(True)
 
+    def test_SampleSize_without_std (self):
+        Result = []
+        result = self.statistics.SampleSizeWithoutStd(self.testData)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
+
+    def test_SampleSize_with_std (self):
+        Result = []
+        result = self.statistics.SampleSizeWithStd(self.testData)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
+
+
 
 if __name__ == '__main__':
     unittest.main()

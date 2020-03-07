@@ -4,10 +4,9 @@ from Calculator.squareRoot import squareRoot
 
 
 def MarginError(data):
-
     List = []
     SE = int(StandardDeviationSample(data) / (squareRoot(len(data))))
-    for i in zscore(z_values(data)):
+    for i in Z_scores(z_values(data)):
         ME = i * SE
         List.append(ME)
 
