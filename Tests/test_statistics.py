@@ -8,8 +8,6 @@ from Statistics.Zscores import z_values
 from Statistics.systematic import Systematic
 
 
-
-
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.testData = random_code()
@@ -18,11 +16,6 @@ class MyTestCase(unittest.TestCase):
         self.testZ = z_values(self.testData)
         self.testSystematic = Systematic(self.testData)
         self.testZscore = z_values(self.testData)
-
-
-
-
-
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -79,9 +72,9 @@ class MyTestCase(unittest.TestCase):
         if masterResult == result:
             self.assertTrue(True)  # Is always True
 
-    def test_systematic_calc (self):
+    def test_systematic_calc(self):
 
-        Result =[]
+        Result = []
         result = self.statistics.Systematic(self.testSystematic)
         for i in result:
             Result.append(i)
@@ -89,8 +82,7 @@ class MyTestCase(unittest.TestCase):
         if Result == result:
             self.assertTrue(True)
 
-
-    def test_Z_scores (self):
+    def test_Z_scores(self):
         Result = []
         result = self.statistics.Z_scores(self.testZscore)
         for i in result:
@@ -98,6 +90,20 @@ class MyTestCase(unittest.TestCase):
 
         if Result == result:
             self.assertTrue(True)
+
+    def test_confidence_interval(self):
+
+        Result = []
+        result = self.statistics.Confidence_interval(self.testData)
+        for i in result:
+            Result.append(i)
+
+        if Result == result:
+            self.assertTrue(True)
+
+    def test_skewness (self):
+        skew = self.statistics.Skewness(self.testData)
+        self.assertEqual(skew, 0.5358863777674638)
 
 if __name__ == '__main__':
     unittest.main()
