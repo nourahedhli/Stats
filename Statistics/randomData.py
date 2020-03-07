@@ -22,9 +22,16 @@ def random_code():
     randomData2.sort()
 
     List = randomData2 + randomData1
+
     pprint.pprint(List)
+
     rand_num = random.choice(List)
+
+
+
+
     pprint.pprint(rand_num)
+
     return List
 
 
