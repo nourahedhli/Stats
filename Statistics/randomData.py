@@ -13,9 +13,8 @@ def random_code():
     while i < 6:
         y = random.randint(1, 100)
         randomData1.append(y)
-        x = random.random()
-        x_decimal = round(x, 2)
-        randomData2.append(x_decimal)
+        x = '{:04.3f}'.format(random.uniform(1, 100))
+        randomData2.append(float(x))
         i += 1
     # select a random item from a list
     randomData1.sort()
@@ -27,12 +26,21 @@ def random_code():
 
     rand_num = random.choice(List)
 
-
-
-
-    pprint.pprint(rand_num)
+    # pprint.pprint(rand_num)
 
     return List
+
+
+def random_data2():
+    random.seed(2)
+    i = 0
+    list2 = []
+    while i < 6:
+        x = '{:04.3f}'.format(random.uniform(2, 100))
+        list2.append(x)
+        i += 1
+    pprint.pprint(list2)
+    return list2
 
 
 def random_code_withoutSeed():
