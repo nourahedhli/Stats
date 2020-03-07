@@ -1,4 +1,4 @@
-import numpy as no
+import numpy as np
 from scipy.stats import norm
 import math
 
