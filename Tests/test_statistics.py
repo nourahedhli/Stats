@@ -12,8 +12,8 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.testData = random_code()
-        self.statistics = Statistics()
         self.testData2 = random_data2()
+        self.statistics = Statistics()
         self.testData1 = random_code_withoutSeed()
 
         self.testZ = z_values(self.testData)
@@ -142,13 +142,21 @@ class MyTestCase(unittest.TestCase):
         if Result == result:
             self.assertTrue(True)
 
-    def test_Abs_mean_Dev (self):
+    def test_Abs_mean_Dev(self):
         meanADev = self.statistics.MeanAbsStd(self.testData)
         self.assertEqual(meanADev, 24.03988)
 
-    def test_mean_Dev (self):
+    def test_mean_Dev(self):
         meanDev = self.statistics.MeanStd(self.testData)
         self.assertEqual(meanDev, 1.4210854715202005e-15)
+
+    def test_Population_Correlation(self):
+        PopCorre = self.statistics.Population_Correlation(self.testData, self.testData2)
+        self.assertEqual(PopCorre,4)
+
+    def test_Sample_Correlation(self):
+        SamCorre = self.statistics.Sample_Correlation(self.testData, self.testData2)
+        self.assertEqual(SamCorre,4)
 
 if __name__ == '__main__':
     unittest.main()

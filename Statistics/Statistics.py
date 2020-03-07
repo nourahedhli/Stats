@@ -12,7 +12,7 @@ from Statistics.marginError import MarginError
 from Statistics.Variance import *
 
 from Statistics.Zscores import *
-
+from Statistics.Correlation import *
 from Statistics.confidence_interval import *
 from Statistics.sampleSize import *
 from Statistics.skewness import *
@@ -105,4 +105,12 @@ class Statistics(Calculator):
 
     def MeanStd(self, data):
         self.result = meanDev(data)
+        return self.result
+
+    def Sample_Correlation(self, list1, list2):
+        self.result = Sample_Correlation(list1, list2)
+        return self.result
+
+    def Population_Correlation(self, list1, list2):
+        self.result = Population_Correlation(list1, list2)
         return self.result

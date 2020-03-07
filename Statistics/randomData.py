@@ -4,6 +4,26 @@ import numpy as np
 import decimal
 
 
+def random_code2():
+    random.seed(5)
+    random_data1 = []
+    random_data2 = []
+    List = []
+    i = 1
+    while i < 6:
+        y = random.randint(1, 100)
+        random_data1.append(y)
+        x = '{:04.3f}'.format(random.uniform(1, 100))
+        random_data2.append(float(x))
+        i += 1
+    # select a random item from a list
+    random_data1.sort()
+    random_data2.sort()
+
+    List = random_data2 + random_data1
+    return List
+
+
 def random_code():
     random.seed(6)
     randomData1 = []
