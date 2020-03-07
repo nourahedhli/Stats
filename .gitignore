@@ -1,3 +1,5 @@
 .idea
 venv
 /postgres-data/*
+coverage
+

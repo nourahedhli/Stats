@@ -1,3 +1,2 @@
-SERVICE_NAME: travis-ci
-REPO_TOKEN: wKeIMjRos7dTUGcz9KLZPz6AnFkZfYONF
-COVERALLS_GIT_BRANCH: master
+service_name: travis-pro
+repo_token: BBqpKDZK2jOJmZXzrwEQxHKmDNLOqL3N3
