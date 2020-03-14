@@ -1,9 +1,4 @@
-from Calculator.Addition import addition
-from Calculator.Division import division
-from Statistics.randomData import random_code
 
-from Calculator.squareRoot import squareRoot
-import math
 import numpy as np
 
 
